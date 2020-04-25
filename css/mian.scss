@@ -5,7 +5,92 @@ $allColor:#DF1D40;
     font-family: myFirstFont;
     src: url(../FONT/ArbFONTS-GE-SS-Unique-Light.otf);
   }
-  
+  .nice-select:after {
+    border-bottom: 2px solid #DF1D40;
+    border-right: 2px solid #DF1D40;
+    content: '';
+    display: block;
+    height: 8px;
+    margin-top: -4px;
+    pointer-events: none;
+    position: absolute;
+    right: 90%;
+    top: 50%;
+    -webkit-transform-origin: 66% 66%;
+    -ms-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    width: 8px;
+}
+.nice-select .list {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+    box-sizing: border-box;
+    margin-top: 4px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform: scale(0.75) translateY(-21px);
+    -ms-transform: scale(0.75) translateY(-21px);
+    transform: scale(0.75) translateY(-21px);
+    -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    z-index: 9;
+    width: 90%;
+}
+.nice-select .option {
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 40px;
+    list-style: none;
+    min-height: 40px;
+    outline: none;
+    padding-left: 13px;
+    padding-right: 9px;
+    text-align: right;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.nice-select {
+    -webkit-tap-highlight-color: transparent;
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    clear: both;
+    cursor: pointer;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    height: 30px;
+    line-height: 32px;
+    outline: none;
+    padding-left: 70px;
+    padding-right: 4px;
+    position: relative;
+    text-align: right !important;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: auto;
+}
   * {
     box-sizing: border-box;
     font-family: myFirstFont;
@@ -305,7 +390,7 @@ i{
     background-position: center center;
     background-size: cover;
 }}
-#phone
+.phone-now
 {
     cursor: pointer;
     display: flex;
@@ -1043,3 +1128,228 @@ a{
     }
 }
 
+#catgry
+{
+    button{
+        background-color: $allColor;
+        color: #fff;
+        cursor: pointer;
+    }
+    background-color: #F3F3F3;
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    width: 30%;
+    z-index: 999999;
+.col-6{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.fa-sliders-h
+{
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}
+#close-cargry
+{
+    position: relative;
+    top:-10%;
+    right: 88%;
+    background-color: rgb(226,226,226);
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+}
+@media (min-width:769px)and(max-width:1024px)
+{
+    #catgry
+    {
+        top: 5%;
+        left: 4%;
+        width: 35%;
+    }
+}
+@media (min-width:767px)and(max-width:768px)
+{
+    #catgry
+    {
+        top: 6.5%;
+        left: 4%;
+        width: 45%;
+    }
+}
+#all-catgry
+{
+    position: fixed;
+    top: 0;   
+    right: 0;   
+    bottom: 0;   
+    left: 0;
+    background-color: transparent;   
+    z-index: 99999;
+    display: none;
+    
+}
+@media (max-width:700px)
+{
+    #all-catgry
+{
+  
+    position: fixed;
+    top: 0;   
+    right: 0;   
+    bottom: 0;   
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);   
+    z-index: 99999;
+    display: none;    
+}
+    #catgry
+    {
+        top: 65%;
+        left: 5%;
+        width: 90%;
+        animation-name: bot-to-top5;
+        animation-duration: 1s;
+    }
+}
+
+@keyframes bot-to-top5
+{
+    0%{
+        top:80% ;
+    }
+    100%{
+        top:65% ;
+    }
+}
+#popup-details
+{
+    position: fixed;
+    top: 0;   
+    right: 0;   
+    bottom: 0;   
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);   
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+   animation-name: pop;
+   animation-duration: 1s;
+    #restranut-details
+    {
+        width: 25%;
+        background-color: #F3F3F3;
+        height: fit-content;
+    .phones
+    {
+    li{
+        line-height: 30px;
+    }
+        }
+   }
+   }
+
+
+
+   @media (min-width:769px)and(max-width:1024px)
+{
+    #popup-details
+{
+    #restranut-details
+    {
+        width: 40%;
+    }
+}}
+@media (min-width:767px)and(max-width:768px)
+{
+    #popup-details
+{
+    #restranut-details
+{
+    width: 50%;
+}}
+}
+
+@media (max-width:700px)
+{
+    #popup-details
+{
+     #restranut-details
+    {
+  
+        top: 85%;
+        left: 5%;
+        width: 90%;
+        
+    }
+}}
+
+
+   .all-mark
+   {
+       background-color: $allColor;
+       padding-left: 20px;
+       padding-top: 3px;
+
+       padding-right: 20px;
+       cursor: pointer;
+       i{
+           margin-top: 5px;
+           padding-top: 3px;
+           color: #E2E2E2;
+       }
+   }
+.numbers-restranut:not(:first-of-type)
+{
+    display: none;
+}
+*{
+    outline:none !important;
+}
+#sub-nav
+{
+    display: none;
+}
+@media(max-width:768px)
+{
+    #sub-nav
+{
+    display: block;
+}
+}
+@media(max-width:700px)
+{
+    .tall-item
+    {
+        font-size: 14px;
+    }
+}
+#loading-page
+{
+    background-color: #FBFBFB;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999999999999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+body{
+    overflow: hidden;
+}
